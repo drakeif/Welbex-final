@@ -1,0 +1,28 @@
+/* COLOR */
+$bl: #000000;
+$wh: #ffffff;
+$light: #E4E5EA;
+$accent: #FCB045;
+
+$colorH1: linear-gradient(45deg, #FFB144, #FF3F78);
+/* MEDIA */
+@mixin media($w) {
+    @media only screen and (max-width: #{$w + 'px'}) {
+        @content
+    }
+};
+/* TEXT GRADIENT */
+@mixin txtH1($grad) {
+    background-image: $grad;
+  
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}

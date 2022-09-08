@@ -1,0 +1,51 @@
+@import './elements/fonts';
+@import './elements/vars';
+/* MAIN STYLES */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 10px
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    color: $wh;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle
+}
+.container {
+    width: 100%;
+    max-width: 117rem;
+    min-width: 32rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: $light;
+    font-weight: 500;
+}
+h1 {
+    font-size: 4.8rem;
+    font-weight: 400;
+}
+p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: $light;
+}
+@import './elements/header';
+@import './elements/intro';
