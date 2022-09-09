@@ -97,18 +97,40 @@ img {
 
 a {
   text-decoration: none;
-  color: #E4E5EA;
+  color: #cccccc;
   font-weight: 500; }
 
 h1 {
   font-size: 4.8rem;
   font-weight: 400; }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 3.8rem; } }
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 2.8rem; } }
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400; }
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #cccccc; }
 
 p {
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 1.8rem;
-  color: #E4E5EA; }
+  color: #cccccc; }
+  @media only screen and (max-width: 768px) {
+    p {
+      font-size: 1.6rem; } }
+  @media only screen and (max-width: 500px) {
+    p {
+      font-size: 1.4rem; } }
 
 .header {
   margin-top: 5rem;
@@ -142,7 +164,7 @@ p {
     font-weight: 300;
     font-size: 1rem;
     margin-top: 1rem;
-    color: #E4E5EA; }
+    color: #cccccc; }
   @media only screen and (max-width: 680px) {
     .header__nav {
       display: none; } }
@@ -159,7 +181,7 @@ p {
       position: absolute;
       width: 4rem;
       height: .1rem;
-      background: #E4E5EA;
+      background: #cccccc;
       pointer-events: none;
       -webkit-transition: .2s linear;
       transition: .2s linear; }
@@ -206,7 +228,7 @@ p {
     -webkit-transition: .2s linear;
     transition: .2s linear; }
     .header__link:hover {
-      color: #FCB045; }
+      color: #ffffff; }
   .header__media {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -229,7 +251,7 @@ p {
     -webkit-transition: .2s linear;
     transition: .2s linear; }
     .header__phone_toCall:hover {
-      color: #FCB045; }
+      color: #ffffff; }
   .header__socials {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -260,10 +282,42 @@ p {
   height: 100vh;
   background: #000000;
   padding-top: 21rem; }
+  @media only screen and (max-width: 768px) {
+    .intro {
+      padding-top: 16rem; } }
+  @media only screen and (max-width: 500px) {
+    .intro {
+      padding-top: 11rem; } }
+  .intro__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media only screen and (max-width: 768px) {
+      .intro__inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        row-gap: 5rem; } }
+    @media only screen and (max-width: 500px) {
+      .intro__inner {
+        row-gap: 3rem; } }
   .intro__block {
     max-width: 36rem; }
     .intro__block h1 {
       margin-bottom: 3rem; }
+      @media only screen and (max-width: 768px) {
+        .intro__block h1 {
+          margin-bottom: 2rem; } }
+      @media only screen and (max-width: 500px) {
+        .intro__block h1 {
+          margin-bottom: 1rem; } }
       .intro__block h1 span {
         font-weight: 900;
         background-image: linear-gradient(45deg, #FFB144, #FF3F78);
@@ -278,5 +332,42 @@ p {
         -moz-text-fill-color: transparent; }
     .intro__block P {
       max-width: 26rem; }
+  .intro__about {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 3rem; }
+    @media only screen and (max-width: 768px) {
+      .intro__about {
+        gap: 2rem; } }
+    @media only screen and (max-width: 500px) {
+      .intro__about {
+        grid-template-columns: repeat(1, auto);
+        gap: 1rem; } }
+  .intro__grid {
+    text-align: end; }
+    @media only screen and (max-width: 500px) {
+      .intro__grid {
+        text-align: left; } }
+    .intro__grid:nth-child(1) {
+      grid-column: 1/3;
+      margin-bottom: 1rem; }
+      @media only screen and (max-width: 500px) {
+        .intro__grid:nth-child(1) {
+          grid-column: auto; } }
+    .intro__grid h3 span {
+      text-transform: uppercase;
+      font-weight: 900;
+      background-image: linear-gradient(45deg, #FCB045, #FD1D1D);
+      /* Set the background size and repeat properties. */
+      background-size: 100%;
+      background-repeat: repeat;
+      /* Use the text as a mask for the background. */
+      /* This will show the gradient as a text color rather than element bg. */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent; }
+    .intro__grid h4 {
+      margin-bottom: .7rem; }
 
 /*# sourceMappingURL=main.css.map */

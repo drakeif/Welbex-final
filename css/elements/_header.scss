@@ -95,7 +95,7 @@
     &__link {
         transition: .2s linear;
         &:hover {
-            color: $accent;
+            color: $wh;
         }
     }
     &__media {
@@ -115,7 +115,7 @@
             white-space: nowrap;
             transition: .2s linear;
             &:hover {
-                color: $accent;
+               color: $wh;
             }
         }
     }
