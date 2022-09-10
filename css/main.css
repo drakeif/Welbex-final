@@ -138,7 +138,8 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 10; }
   @media only screen and (max-width: 500px) {
     .header {
       margin-top: 2.5rem; } }
@@ -278,10 +279,27 @@ p {
       width: 2rem; }
 
 .intro {
+  position: relative;
+  padding-top: 21rem;
   width: 100%;
   height: 100vh;
-  background: #000000;
-  padding-top: 21rem; }
+  background: #13111a;
+  background-image: url("../icons/home_page/purple_light.svg"), url("../icons/home_page/red_light.svg"), url("../icons/home_page/yellow_light.svg"), url("../icons/home_page/red_ball.svg"), url("../icons/home_page/yellow_ball.svg"), url("../icons/home_page/red_ball_small.svg"), url("../icons/home_page/polyhedron.svg"), url("../icons/home_page/dots.svg"), url("../icons/home_page/purple_ball.svg");
+  background-repeat: no-repeat;
+  background-position: 70% 0%, 0% 0%, 100% 0%, 40% 10%, 35% 95%, 60% 75%, center, center, 60% 0%; }
+  .intro::after {
+    content: '';
+    display: block;
+    background: rgba(19, 17, 26, 0.1);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px); }
   @media only screen and (max-width: 768px) {
     .intro {
       padding-top: 16rem; } }
@@ -289,6 +307,8 @@ p {
     .intro {
       padding-top: 11rem; } }
   .intro__inner {
+    position: relative;
+    z-index: 9;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -369,5 +389,26 @@ p {
       -moz-text-fill-color: transparent; }
     .intro__grid h4 {
       margin-bottom: .7rem; }
+  .intro__scroll {
+    position: absolute;
+    z-index: 9;
+    bottom: 20%;
+    left: 20%;
+    -webkit-animation: scroll infinite alternate ease-in-out .7s;
+            animation: scroll infinite alternate ease-in-out .7s; }
+@-webkit-keyframes scroll {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(0.7rem);
+            transform: translateY(0.7rem); } }
+@keyframes scroll {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(0.7rem);
+            transform: translateY(0.7rem); } }
 
 /*# sourceMappingURL=main.css.map */
