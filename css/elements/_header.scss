@@ -33,6 +33,21 @@
         @include media(680) {
             display: none;
         }
+        &.active {
+            display: flex;
+            justify-content: flex-start;
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            text-transform: uppercase;
+            background: $bl;
+            padding: 1rem 1.5rem;
+            .header__links {
+                flex-direction: column;
+                row-gap: 1rem;
+            }
+        } 
     }
     &__burger {
         position: relative;
@@ -110,6 +125,21 @@
         @include media(500) {
             display: none;
         }
+        &.active {
+                display: flex;
+                position: absolute;
+                top: 324%;
+                left: 0;
+                padding: 1rem 1.5rem;
+                background: $bl;
+                width: 100%;
+            .header__phone {
+                display: none;
+            }
+            .header__socials {
+                justify-content: flex-start;
+            }
+        }
     }
     &__phone {
         &_toCall {
@@ -138,6 +168,14 @@
         }
         &_icon {
             width: 2rem;
+        }
+    }
+    &.active {
+        margin-top: 0;
+        padding: 2rem 0;
+        background: $bl;
+        .header__text {
+            display: none;
         }
     }
 }

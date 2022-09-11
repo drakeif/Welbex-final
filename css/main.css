@@ -169,6 +169,26 @@ p {
   @media only screen and (max-width: 680px) {
     .header__nav {
       display: none; } }
+  .header__nav.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    background: #13111a;
+    padding: 1rem 1.5rem; }
+    .header__nav.active .header__links {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      row-gap: 1rem; }
   .header__burger {
     position: relative;
     display: none;
@@ -247,6 +267,22 @@ p {
     @media only screen and (max-width: 500px) {
       .header__media {
         display: none; } }
+    .header__media.active {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      top: 324%;
+      left: 0;
+      padding: 1rem 1.5rem;
+      background: #13111a;
+      width: 100%; }
+      .header__media.active .header__phone {
+        display: none; }
+      .header__media.active .header__socials {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
   .header__phone_toCall {
     white-space: nowrap;
     -webkit-transition: .2s linear;
@@ -277,6 +313,12 @@ p {
                 transform: translateY(-0.5rem); }
     .header__socials_icon {
       width: 2rem; }
+  .header.active {
+    margin-top: 0;
+    padding: 2rem 0;
+    background: #13111a; }
+    .header.active .header__text {
+      display: none; }
 
 .intro {
   position: relative;
@@ -300,12 +342,19 @@ p {
     right: 0;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px); }
+    @media only screen and (max-width: 500px) {
+      .intro::after {
+        width: 100%;
+        -webkit-backdrop-filter: blur(3px);
+                backdrop-filter: blur(3px); } }
   @media only screen and (max-width: 768px) {
     .intro {
       padding-top: 16rem; } }
   @media only screen and (max-width: 500px) {
     .intro {
-      padding-top: 11rem; } }
+      padding-top: 11rem;
+      background-position: 70% 0%, 0% 0%, 100% 0%, 5% 35%, 100% 100%, 5% 75%, bottom, bottom, 60% 0%;
+      background-size: auto, auto, auto, auto, auto, auto, 80%, auto, auto; } }
   .intro__inner {
     position: relative;
     z-index: 9;
@@ -325,9 +374,6 @@ p {
             -ms-flex-align: center;
                 align-items: center;
         row-gap: 5rem; } }
-    @media only screen and (max-width: 500px) {
-      .intro__inner {
-        row-gap: 3rem; } }
   .intro__block {
     max-width: 36rem; }
     .intro__block h1 {
@@ -361,7 +407,6 @@ p {
         gap: 2rem; } }
     @media only screen and (max-width: 500px) {
       .intro__about {
-        grid-template-columns: repeat(1, auto);
         gap: 1rem; } }
   .intro__grid {
     text-align: end; }
@@ -371,9 +416,6 @@ p {
     .intro__grid:nth-child(1) {
       grid-column: 1/3;
       margin-bottom: 1rem; }
-      @media only screen and (max-width: 500px) {
-        .intro__grid:nth-child(1) {
-          grid-column: auto; } }
     .intro__grid h3 span {
       text-transform: uppercase;
       font-weight: 900;
@@ -388,7 +430,25 @@ p {
       -moz-background-clip: text;
       -moz-text-fill-color: transparent; }
     .intro__grid h4 {
+      position: relative;
       margin-bottom: .7rem; }
+      @media only screen and (max-width: 500px) {
+        .intro__grid h4 {
+          padding-left: 1.5rem; }
+          .intro__grid h4::before {
+            content: '';
+            display: block;
+            background: linear-gradient(45deg, #FCB045, #FD1D1D);
+            width: 1rem;
+            height: 0.2rem;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            left: 0; } }
+    @media only screen and (max-width: 500px) {
+      .intro__grid p {
+        display: none; } }
   .intro__scroll {
     position: absolute;
     z-index: 9;
@@ -396,6 +456,12 @@ p {
     left: 20%;
     -webkit-animation: scroll infinite alternate ease-in-out .7s;
             animation: scroll infinite alternate ease-in-out .7s; }
+    @media only screen and (max-width: 500px) {
+      .intro__scroll {
+        bottom: 5%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); } }
 @-webkit-keyframes scroll {
   from {
     -webkit-transform: translateY(0);
