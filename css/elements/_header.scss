@@ -37,7 +37,7 @@
             display: flex;
             justify-content: flex-start;
             position: absolute;
-            top: 99%;
+            top: 100%;
             left: 0;
             right: 0;
             text-transform: uppercase;
@@ -128,16 +128,14 @@
         &.active {
                 display: flex;
                 position: absolute;
-                top: 323%;
-                left: 0;
+                top: 100%;
+                right: 0;
                 padding: 1rem 1.5rem;
-                background: $bl;
-                width: 100%;
             .header__phone {
                 display: none;
             }
             .header__socials {
-                justify-content: flex-start;
+                justify-content: flex-end;
             }
         }
     }

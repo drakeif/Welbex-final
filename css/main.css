@@ -177,7 +177,7 @@ p {
         -ms-flex-pack: start;
             justify-content: flex-start;
     position: absolute;
-    top: 99%;
+    top: 100%;
     left: 0;
     right: 0;
     text-transform: uppercase;
@@ -272,17 +272,15 @@ p {
       display: -ms-flexbox;
       display: flex;
       position: absolute;
-      top: 323%;
-      left: 0;
-      padding: 1rem 1.5rem;
-      background: #13111a;
-      width: 100%; }
+      top: 100%;
+      right: 0;
+      padding: 1rem 1.5rem; }
       .header__media.active .header__phone {
         display: none; }
       .header__media.active .header__socials {
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start; }
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
   .header__phone_toCall {
     white-space: nowrap;
     -webkit-transition: .2s linear;
