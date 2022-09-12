@@ -85,13 +85,7 @@
                     transform: rotate(-45deg);
                 }
                 &:nth-child(2) {
-                    top: 49%;
-                    transform: translateX(4rem);
-                    background: $accent;
-                    opacity: 0;
-                    @include media(500) {
-                        display: none;
-                    }
+                    display: none;
                 }
                 &:nth-child(3) {
                     bottom: 50%;
